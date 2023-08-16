@@ -15,7 +15,7 @@ void push(tp_pilha *p, int value) {
     }
 
     p->topo++;
-    p->info[p->topo] = value;
+    *(p->info+p->topo) = value;
     printf("Elemento %d inserido na pilha.\n", value);
 }
 
@@ -25,7 +25,7 @@ void pop(tp_pilha *p) {
         return;
     }
 
-    printf("Elemento %d removido da pilha.\n", p->info[p->topo]);
+    printf("Elemento %d removido da pilha.\n", *(p->info+p->topo);
     p->topo--;
 }
 
@@ -37,7 +37,7 @@ void display(tp_pilha *p) {
 
     printf("Elementos da pilha:\n");
     for (int i = p->topo; i >= 0; i--) {
-        printf("%d\n", p->info[i]);
+        printf("%d\n", *(p->info+i);
     }
 }
 
